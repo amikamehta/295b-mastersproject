@@ -1,0 +1,11 @@
+.editUser{
+    flex: 4;
+    color: whitesmoke;
+    padding: 20px;
+}
+
+.editUserContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -1,0 +1,63 @@
+*{
+    background-color: #1d2f4a;
+}
+
+.topbar{
+    height: 50px;
+    width: 100%;
+    background-color: white;
+    /* So that when you scroll the top bar would remian at the top only */
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+}
+
+.topbarWrapper{
+    height: 100%;
+    padding: 0px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.topBarIconContainer{
+    position: relative;
+    margin-right: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+.topIconBadge{
+    position: absolute;
+    background-color: red;
+    top: -5px;
+    right: -10px;
+    border-radius: 50%;
+    color: white;
+    height: 15px;
+    width: 15px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    font-size: 12px
+}
+
+.topbarRight{
+    display: flex;
+    align-items: center;
+}
+
+.Image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
