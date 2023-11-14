@@ -35,22 +35,28 @@ export default function Sidebar() {
                 Camera
             </h3>
             <ul className="sidebarList">
+            
                 <li className="sidebarItemList">
-                    <CameraAlt className="sidebarIcon"/>
-                    Add Camera
+                <CameraAlt className="sidebarIcon"/>
+                   
+                    <Link to={"/AddCamera"}><button className="linkButton"> Add Camera</button></Link>
                 </li>
                 <li className="sidebarItemList">
                     <FlipCameraAndroid className="sidebarIcon"/>
-                    Update Camera
+                 
+                    <Link to={"/updateCamera"}><button className="linkButton"> Update Camera</button></Link>
                 </li>
                 <li className="sidebarItemList">
                     <CameraRoll className="sidebarIcon"/>
-                    View Camera
+                    
+                    <Link to={"/viewCameras"}><button className="linkButton"> View Camera</button></Link>
                 </li>
                 <li className="sidebarItemList">
-                    <VideocamOff className="sidebarIcon"/>
-                    Delete Camera
+                <VideocamOff className="sidebarIcon"/>
+                    
+                    <Link to={"/deleteCamera"}><button className="linkButton"> Delete Camera</button></Link>
                 </li>
+             
             </ul>
         </div>
 
