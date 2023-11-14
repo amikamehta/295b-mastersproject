@@ -8,6 +8,8 @@ export default function UpdateCamera() {
     <div class="form-style-6">
 <form>
 <input type="text" name="field1" placeholder="Camera ID" />
+<input type="text" name="field1" placeholder="New Location" />
+<input type="text" name="field1" placeholder="New Camera Type" />
 <input type="text" name="field1" placeholder="New IP Address" />
 <input type="email" name="field2" placeholder="New Nickname" />
 <textarea name="field3" placeholder="Comments"></textarea>

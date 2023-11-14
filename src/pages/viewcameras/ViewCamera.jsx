@@ -36,6 +36,21 @@ export default function ViewCamera() {
     <button class="button1">ID 6</button>
     <button class="button2">edit</button>
   </div>
+  <div class="grid-item">
+    <iframe src = "https://www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder = "0" allowfullscreen></iframe>
+    <button class="button1">ID 7</button>
+    <button class="button2">edit</button>
+  </div>
+  <div class="grid-item">
+    <iframe src = "https://www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder = "0" allowfullscreen></iframe>
+    <button class="button1">ID 8</button>
+    <button class="button2">edit</button>
+  </div>
+  <div class="grid-item">
+    <iframe src = "https://www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder = "0" allowfullscreen></iframe>
+    <button class="button1">ID 9</button>
+    <button class="button2">edit</button>
+  </div>
 
   
 </section>
