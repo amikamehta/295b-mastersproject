@@ -1,0 +1,20 @@
+.billingPage{
+    padding: 40px;
+    flex: 4;
+    color: whitesmoke;
+}
+
+.Billingbutton {
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    background-color: rgb(74, 137, 74);
+    color: whitesmoke;
+    cursor: pointer;
+    margin-left: 300px;
+}
+
+.subtotal{
+    margin-left: 410px;
+    margin-bottom: 10px;
+}

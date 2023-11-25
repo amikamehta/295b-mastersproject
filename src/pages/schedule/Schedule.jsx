@@ -38,7 +38,7 @@ const columns = [
   return (
     <div className="userList">
         <span className="title">
-        <h3 className="cameraSchedule">Camera Schedule</h3>
+        <h3 className="cameraSchedule">Maintainance Schedule</h3>
         <Link to ={"/addSchedule"}>
         <button className="createButton">Add Schedule</button>
         </Link>

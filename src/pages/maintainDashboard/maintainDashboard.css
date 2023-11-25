@@ -1,0 +1,16 @@
+.maintainPage{
+    flex:4;
+    padding: 40px;
+}
+
+  .chartAndTableContainer {
+    display: flex;
+    gap: 10px; 
+  }
+  
+  .tableContainer {
+    /* flex: 1;  */
+    width: calc(100% - 350px - 20px); /* Adjust maximum width to fit alongside chart */
+    height: 250px;
+    margin-top: 30px;
+  }

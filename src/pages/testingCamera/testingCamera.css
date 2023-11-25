@@ -1,0 +1,13 @@
+/* CameraStream.css */
+.testingTitle {
+    padding: 40px;
+    flex: 4;
+    color: whitesmoke;
+    /* Any other styles you need */
+  }
+  
+.frameCamera{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

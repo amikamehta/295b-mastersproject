@@ -1,0 +1,42 @@
+.help{
+    flex: 4;
+    padding: 40px;
+}
+
+.containerHelp{
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.titleHelp{
+    margin-top: -20px;
+    margin-left: 300px;
+    margin-bottom: 10px;
+    font-size: 25px;
+    color: rgb(169, 187, 203);
+}
+
+.AboutUs{
+    margin-top: -500px;
+    font-size: 20px;
+    color: rgb(169, 187, 203);
+}
+
+.contentAboutUs{
+    font-size: 15px;
+    color: whitesmoke;
+    margin-top: 30px;
+    margin-left: -200px;
+
+}
+
+.mapAbout{
+     justify-content: space-between;
+    align-items: center;
+    display: flex;
+}
+
+.serviceHours{
+    margin-right: 40px;
+}

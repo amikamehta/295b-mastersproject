@@ -1,0 +1,31 @@
+.buttonCard{
+        border: none;
+        border-radius: 10px;
+        padding: 5px 10px;
+        background-color: rgb(74, 137, 74);
+        color: whitesmoke;
+        justify-content: end;
+        cursor: pointer;
+}
+
+.productImage{
+ height: 150px;
+ width: 150px;
+}
+
+.description{
+ margin-left: 40px;
+}
+.costCard{
+margin-left: 20px;
+}
+.buttonCart{
+        border: none;
+        border-radius: 10px;
+        padding: 5px 10px;
+        background-color: rgb(74, 137, 74);
+        color: whitesmoke;
+        margin-right: 20px;
+        cursor: pointer;
+        margin-left: 30px;
+}

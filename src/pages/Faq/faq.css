@@ -1,0 +1,27 @@
+.accordion{
+        flex: 4;
+        padding: 40px;
+        margin-left: 100px;
+}
+
+.faqtitle{
+        font-size: 20px;
+        color: rgb(169, 187, 203);
+        justify-content: space-evenly;
+        display: flex;
+        margin-bottom: 30px;
+        margin-top: -20px;
+        margin-left: -820px;
+}
+
+.accordionSub{
+    width: 700px;
+}
+
+.text{
+    font-size: 20px;
+    color: rgb(169, 187, 203);
+}
+.accordionDetails{
+    color:rgb(169, 187, 203);
+}

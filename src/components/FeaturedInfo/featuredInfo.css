@@ -29,7 +29,7 @@
     justify-content: space-between;
 }
 
-.text{
+.textInfo{
     display: flex;
     align-items: center;
     font-weight: 600;

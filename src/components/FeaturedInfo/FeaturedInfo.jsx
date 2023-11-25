@@ -14,7 +14,7 @@ export default function FeaturedInfo() {
                     <CameraAlt className="icon"/>
                 </span>
             </div>
-            <span className="text">
+            <span className="textInfo">
                 View camera location
             </span>
         </div>
@@ -29,7 +29,7 @@ export default function FeaturedInfo() {
                 <ArrowUpward className="icon"/>
             </span>
             </div>
-            <span className="text">
+            <span className="textInfo">
                 Compared to last hour
             </span>
         </div>
@@ -44,7 +44,7 @@ export default function FeaturedInfo() {
                 <Edit className="icon"/>
             </span>
             </div>
-            <span className="text">
+            <span className="textInfo">
                 In the last hour
             </span>
         </div>  
@@ -59,7 +59,7 @@ export default function FeaturedInfo() {
                 <Person className="icon"/>
             </span>
             </div>
-            <span className="text">
+            <span className="textInfo">
                 Number of current active users
             </span>
         </div>  

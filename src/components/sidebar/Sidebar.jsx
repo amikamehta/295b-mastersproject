@@ -45,7 +45,7 @@ export default function Sidebar() {
                 </li>
                 <li className="sidebarItemList">
                     <CameraRoll className="sidebarIcon"/>
-                    View Camera
+                    <Link to={"/testingCamera"}><button className="linkButton">View Camera</button></Link>
                 </li>
                 <li className="sidebarItemList">
                     <VideocamOff className="sidebarIcon"/>
@@ -74,7 +74,7 @@ export default function Sidebar() {
                 </li>
                 <li className="sidebarItemList">
                     <MenuBook className="sidebarIcon"/>
-                    Camera Catlog
+                    <Link to={"/cameraCatlog"}><button className="linkButton">Camera Catlog</button></Link>
                 </li>
             </ul>
         </div>
@@ -87,15 +87,15 @@ export default function Sidebar() {
             <ul className="sidebarList">
                 <li className="sidebarItemList">
                     <AttachMoney className="sidebarIcon"/>
-                    Billing
+                    <Link to={"/billing"}><button className="linkButton">Billing</button></Link>
                 </li>
                 <li className="sidebarItemList">
                     <Info className="sidebarIcon"/>
-                    FAQ
+                    <Link to={"/faq"}><button className="linkButton">FAQ</button></Link>
                 </li>
                 <li className="sidebarItemList">
                     <LiveHelp className="sidebarIcon"/>
-                    Help
+                    <Link to={"/help"}><button className="linkButton">Help</button></Link>
                 </li>
             </ul>
         </div>

@@ -7,7 +7,7 @@ export default function Topbar() {
         <div className='topbarWrapper'>
             <div className='topbarLeft'>
                 <span className='logo'>
-                    ADMIN DASHBOARD
+                    SYSTEM DASHBOARD
                 </span>
             </div>
             <div className='topbarRight'>

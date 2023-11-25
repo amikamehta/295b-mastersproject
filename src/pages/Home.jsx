@@ -9,7 +9,6 @@ export default function Pages() {
       <FeaturedInfo/>
       <Map/>
       <Chart/>
-  
     </div>
   );
 }

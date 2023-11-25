@@ -1,0 +1,14 @@
+.cameraCatlog{
+    flex: 4;
+    padding: 40px;
+}
+
+.titlestore{
+    color:whitesmoke;
+}
+.products{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    color: whitesmoke
+}

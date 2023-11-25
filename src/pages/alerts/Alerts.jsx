@@ -16,10 +16,10 @@ const handleDelete = (id)=>{
 }
 const columns = [
     { field: 'id', headerName: 'ID', type:'number', width: 100,sortable: true,headerAlign: 'center', align:'center' },
-    { field: 'type', headerName: 'Type', type:'string', width: 140,headerAlign: 'center',align:'center' },
+    { field: 'type', headerName: 'Type', type:'string', width: 160,headerAlign: 'center',align:'center' },
     { field: 'location', headerName: 'Location', type: 'string', width: 140,headerAlign: 'center',align:'center'},
-    { field: 'severity', headerName: 'Severity', type: 'number', width: 140,headerAlign: 'center',align:'center'},
-    { field: 'status', headerName: 'Status',sortable: true, width: 150,headerAlign: 'center',align:'center' },
+    { field: 'severity', headerName: 'Severity', type: 'number', width: 130,headerAlign: 'center',align:'center'},
+    { field: 'status', headerName: 'Status',sortable: true, width: 140,headerAlign: 'center',align:'center' },
     { field: 'comments', headerName: 'Comments', type:'String',sortable: false,width: 150,headerAlign: 'center',align:'center'},
     { field: 'Action', headerName: 'Action', type:'String',sortable: false,width: 155,headerAlign: 'center',align:'center',
         renderCell:(params)=>{
