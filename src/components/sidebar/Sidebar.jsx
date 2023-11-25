@@ -48,12 +48,8 @@ export default function Sidebar() {
                 </li>
                 <li className="sidebarItemList">
                     <CameraRoll className="sidebarIcon"/>
-<<<<<<< HEAD
-                    <Link to={"/testingCamera"}><button className="linkButton">View Camera</button></Link>
-=======
                     
                     <Link to={"/viewCameras"}><button className="linkButton"> View Camera</button></Link>
->>>>>>> 2259f1dc20038b7f743313bcffabb3ef49503096
                 </li>
                 <li className="sidebarItemList">
                 <VideocamOff className="sidebarIcon"/>
