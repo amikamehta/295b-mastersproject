@@ -18,6 +18,10 @@ import SignUp from "./pages/signup/SignUp";
 import TestingCamera from "./pages/testingCamera/TestingCamera";
 import { ShopContextProvider } from "./context/shopContext";
 import MaintainDashboard from "./pages/maintainDashboard/MaintainDashboard";
+import ViewCamera from "./pages/viewcameras/ViewCamera";
+import DeleteCamera from "./pages/deleteCamera/deleteCamera";
+import UpdateCamera from "./pages/updateCamera/UpdateCamera";
+import AddCamera from "./pages/addcamera/AddCamera";
 
 function Content() {
   const location = useLocation();
@@ -35,6 +39,10 @@ function Content() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/users" element={<UserList />} />
+                <Route path="/viewcamera" element={<ViewCamera />} />
+                <Route path="/updatecamera" element={<UpdateCamera />} />
+                <Route path="/deletecamera" element={<DeleteCamera />} />
+                <Route path="/addcamera" element={<AddCamera/>} />
                 <Route path="/schedules" element={<Schedule />} />
                 <Route path="/maintainanceTeam" element={<MaintainanceTeam/>}/>
                 <Route path="/alerts" element={<Alerts />} />
