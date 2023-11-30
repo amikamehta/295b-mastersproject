@@ -1,19 +1,50 @@
-
+import axios from 'axios';
 import { Delete } from "@material-ui/icons";
 import "./alerts.css"
 import { DataGrid } from '@material-ui/data-grid';
 import "../../alertsDummyData.js"
 import { userRows } from "../../alertsDummyData.js"
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 
 export default function Alerts() {
-    const [data,setData] = useState(userRows)
+    const [data,setData] = useState([])
 
-const handleDelete = (id)=>{
-    setData(data.filter((item) => item.id !== id))
-}
+    useEffect(() => {
+        fetchAlerts();
+    }, []);
+
+    const fetchAlerts = async () => {
+        try {
+            const response = await axios.get('http://localhost:4000/alerts');
+            setData(response.data);
+        } catch (error) {
+            console.error("Fetching alerts failed:", error);
+        }
+    };
+    const handleDelete = async (id) => {
+        try {
+            // Send a DELETE request to your API endpoint
+            await axios.delete(`http://localhost:4000/alerts/${id}`);
+    
+            // Update the state to reflect the deletion
+            setData(data.filter((item) => item.id !== id));
+        } catch (error) {
+            console.error("Error deleting alert:", error);
+        }
+    };
+// const handleDelete = aysnc (id) => {
+//     // setData(data.filter((item) => item.id !== id))
+//     try {
+//         await axios.delete(`http://localhost:4000/alerts/${id}`);
+
+//         setData(data.filter((item) => item.id !== id));
+//     } catch (error) {
+//         console.error("Error deleting alert:", error);
+//     }
+// };
+
 const columns = [
     { field: 'id', headerName: 'ID', type:'number', width: 100,sortable: true,headerAlign: 'center', align:'center' },
     { field: 'type', headerName: 'Type', type:'string', width: 160,headerAlign: 'center',align:'center' },

@@ -5,15 +5,36 @@ import { DataGrid } from '@material-ui/data-grid';
 import "../../maintainanceTeamDummyData.js"
 import { userRows } from "../../maintainanceTeamDummyData.js"
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 export default function MaintainanceTeam() {
-    const [data,setData] = useState(userRows)
+    const [data, setData] = useState([]);
 
-const handleDelete = (id)=>{
-    setData(data.filter((item) => item.id !== id))
-}
+    // Fetch team data from the API
+    useEffect(() => {
+        const fetchTeam = async () => {
+            try {
+                const response = await axios.get('http://localhost:4000/manage_profile');
+                setData(response.data);
+            } catch (error) {
+                console.error('Error fetching team data:', error);
+            }
+        };
+
+        fetchTeam();
+    }, []);
+
+    // Handle delete team member
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:4000/manage_profile/${id}`);
+            setData(data.filter((item) => item.id !== id));
+        } catch (error) {
+            console.error('Error deleting team member:', error);
+        }
+    };
 const columns = [
     { field: 'id', headerName: 'ID', type:'number', width: 100,sortable: true,headerAlign: 'center', align:'center' },
     { field: 'name', headerName: 'Name', type:'string', width: 140,headerAlign: 'center',align:'center' },

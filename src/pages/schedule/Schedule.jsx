@@ -5,15 +5,47 @@ import { DataGrid } from '@material-ui/data-grid';
 import "../../dummyData.js"
 import { userRows } from "../../scheduleDummyData.js";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 
 export default function Schedule() {
-    const [data,setData] = useState(userRows)
+    const [data, setData] = useState([]);
 
-const handleDelete = (id)=>{
-    setData(data.filter((item) => item.id !== id))
-}
+    // Fetch schedules from the API
+    useEffect(() => {
+        const fetchSchedules = async () => {
+            try {
+                const response = await axios.get('http://localhost:4000/schedule');
+                const transformedData = response.data.map(item => ({
+                    id: item.id,
+                    'Camera#': item.camera_number,
+                    Location: item.location,
+                    Severity: item.severity,
+                    Asignee: item.assignee,
+                    Status: item.status,
+                    Comments: item.comments
+                }));
+                setData(transformedData);
+        
+            } catch (error) {
+                console.error('Error fetching schedules:', error);
+            }
+        };
+
+        fetchSchedules();
+    }, []);
+
+    // Handle delete schedule
+    const handleDelete = async (id) => {
+        try {
+            await axios.delete(`http://localhost:4000/schedule/${id}`);
+            setData(data.filter((item) => item.id !== id));
+        } catch (error) {
+            console.error('Error deleting schedule:', error);
+        }
+    };
+
 const columns = [
     { field: 'id', headerName: 'ID', type:'number', width: 100,sortable: true,headerAlign: 'center', align:'center' },
     { field: 'Camera#', headerName: 'Camera#', type:'number',sortable: true, width: 140,headerAlign: 'center',align:'center' },
