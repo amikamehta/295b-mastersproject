@@ -10,6 +10,7 @@ function CardComponent(props){
     return (
         <div className="product">
            <img src={image} className="productImage"/>
+
            <div className="description">
             <p>
                 <b>{name}</b>
