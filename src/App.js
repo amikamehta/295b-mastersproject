@@ -23,6 +23,7 @@ import DeleteCamera from "./pages/deleteCamera/deleteCamera";
 import UpdateCamera from "./pages/updateCamera/UpdateCamera";
 import AddCamera from "./pages/addcamera/AddCamera";
 
+
 function Content() {
   const location = useLocation();
   const isAuthPage = location.pathname === "/login" || location.pathname === "/signup";
@@ -53,6 +54,7 @@ function Content() {
                 <Route path="/billing" element={<Billing />} />
                 <Route path="/testingCamera" element={<TestingCamera />} />
                 <Route path='/maintainDashboard' element={<MaintainDashboard/>} />
+
               </Routes>
             </ShopContextProvider>
           </div>

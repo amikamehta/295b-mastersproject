@@ -1,10 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require("cors");
+
 
 const app = express();
-const port = 3001;
+
+const port = 4000;
 
 // Middleware
+app.use(cors());
 app.use(bodyParser.json());
 
 // Import route files
