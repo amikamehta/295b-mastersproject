@@ -38,9 +38,14 @@ export default function Login({ setUserType }) {
           if(size === 1){
 
           }
-          else{
+          else{ 
+            if(email.includes('admin')){
+                navigate('/')
+            }else{
+                navigate('/MaintainanceTeam')
+            }
 
-            navigate('/')
+            
 
           }
         })
