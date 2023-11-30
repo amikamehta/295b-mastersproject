@@ -26,7 +26,7 @@ const columns = [
             return(
                 <>
                 {/* Link to a paticular page->params.row */}
-                <Link to={"/alerts/"+params.row.id}>
+                <Link to={"/editAlert/"+params.row.id}>
                 <button className="editButton">Edit</button>
                 </Link>
                 <Delete className="deleteButton" onClick={()=>handleDelete(params.row.id)}/></>
@@ -38,7 +38,7 @@ const columns = [
     <div className="userList">
         <span className="title">
         <h3 className="alertSchedule">Alert Summary</h3>
-        <Link to ={"/addTeam"}>
+        <Link to ={"/addAlert"}>
         <button className="createButton">Add Alert</button>
         </Link>
         </span>

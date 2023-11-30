@@ -76,7 +76,7 @@ export default function Sidebar() {
                 </li>
                 <li className="sidebarItemList">
                     <Create className="sidebarIcon"/>
-                    Raise Request
+                    <Link to={"/addAlert"}><button className="linkButton">Raise Request</button></Link>
                 </li>
                 <li className="sidebarItemList">
                     <MenuBook className="sidebarIcon"/>

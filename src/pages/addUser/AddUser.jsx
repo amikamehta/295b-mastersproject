@@ -1,4 +1,4 @@
-import "./addCamera.css"
+import "./addUser.css"
 import React, { useContext } from 'react';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -26,24 +26,29 @@ export default function AddCamera() {
 
   return (
     <div className='editCamera'>
-      <h1 className="title">Add Camera</h1>
+      <h1 className="title">Add User</h1>
       <div className="editCameraContainer">
         
     <div class="form-style-6">
 <form>
-<input type="text" name="field1" placeholder="Location" />
-<input type="text" name="field1" placeholder="Camera Type" />
-<input type="text" name="field1" placeholder="IP Address" />
-<input type="email" name="field2" placeholder="Nickname" />
-<textarea name="field3" placeholder="Comments"></textarea>
+<input type="text" name="field1" placeholder="Name" />
+<input type="text" name="field1" placeholder="Age" />
+<input type="text" name="field1" placeholder="Email" />
+<input type="email" name="field2" placeholder="Location" />
+<select name="cars" id="cars">
+    <option value="volvo">Subscription</option>
+    <option value="saab">Permenant</option>
+    <option value="opel">Trial</option>
+    <option value="audi">New</option>
+  </select>
 <Button onClick={handleOpen} className='EditCameraButton' style={{marginLeft:'220px'}}>Submit</Button>
         <Modal
         open={open}
         onClose={handleClose}>
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2" align='center'>
-            New Camera has been succesfully added!
-            <Link to={"/viewcamera"}><button className="Billingbutton">Camera Page</button></Link>
+            New User has been succesfully added!
+            <Link to={"/users"}><button className="Billingbutton">User Page</button></Link>
           </Typography>
         </Box>
       </Modal>

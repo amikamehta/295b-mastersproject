@@ -1,12 +1,12 @@
-import "./addCamera.css"
 import React, { useContext } from 'react';
+import "./editMaintainanceTeam.css"
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Link } from 'react-router-dom';
 import { Navbar, Button} from 'react-bootstrap';
-export default function AddCamera() {
 
+export default function EditUser() {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
@@ -26,31 +26,37 @@ export default function AddCamera() {
 
   return (
     <div className='editCamera'>
-      <h1 className="title">Add Camera</h1>
+      <h1 className="title">Edit Team Details</h1>
       <div className="editCameraContainer">
         
     <div class="form-style-6">
 <form>
+<input type="text" name="field1" placeholder="Name" />
+<input type="number" name="field1" placeholder="Email" />
+<input type="number" name="field1" placeholder="Age" />
 <input type="text" name="field1" placeholder="Location" />
-<input type="text" name="field1" placeholder="Camera Type" />
-<input type="text" name="field1" placeholder="IP Address" />
-<input type="email" name="field2" placeholder="Nickname" />
-<textarea name="field3" placeholder="Comments"></textarea>
-<Button onClick={handleOpen} className='EditCameraButton' style={{marginLeft:'220px'}}>Submit</Button>
+<textarea name="field3" placeholder="Additional Comments"></textarea>
+<Button onClick={handleOpen} className='EditUserButton' style={{marginLeft:'220px'}}>Submit</Button>
         <Modal
         open={open}
         onClose={handleClose}>
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2" align='center'>
-            New Camera has been succesfully added!
-            <Link to={"/viewcamera"}><button className="Billingbutton">Camera Page</button></Link>
+            Maintainance Team has been succesfully updated!
+            <Link to={"/maintainanceTeam"}><button className="Billingbutton">Members</button></Link>
           </Typography>
         </Box>
       </Modal>
 </form>
+
 </div>
+
       </div>
+     
     </div>
   );
 }
+
+
+
 

@@ -1,7 +1,8 @@
-.editCamera{
+.editCameraDelete{
     flex: 4;
     color: whitesmoke;
-    padding: 20px;
+    padding: 40px;
+	margin-top: 100px;
 }
 
 .editCameraContainer{
@@ -11,10 +12,10 @@
 }
 .form-style-6{
 	font: 95% Arial, Helvetica, sans-serif;
-	max-width: 800px;
-	margin: 10px auto;
-	padding: 16px;
+	margin: 5px auto;
+	padding: 10px;
 	background: #F7F7F7;
+	max-width: 200px;
 }
 .form-style-6 h1{
 	background: #43D1AF;
