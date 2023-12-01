@@ -1,5 +1,6 @@
 import React from 'react';
 import {NotificationsNone, Settings, Person, Search} from '@material-ui/icons';
+import { Link } from 'react-router-dom';
 
 export default function Topbar() {
   return (
@@ -12,7 +13,7 @@ export default function Topbar() {
             </div>
             <div className='topbarRight'>
                 <div className='topBarIconContainer'>
-                    <Settings/>
+                <Settings/>
                 </div>
                 <div className='topBarIconContainer'>
                     <Person/>

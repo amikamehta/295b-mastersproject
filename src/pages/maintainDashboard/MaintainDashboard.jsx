@@ -24,8 +24,7 @@ export default function MaintainDashboard() {
           renderCell:(params)=>{
               return(
                   <>
-                  {/* Link to a paticular page->params.row */}
-                  <Link to={"/schedules/"+params.row.id}>
+                  <Link to={"/editSchedule/"+params.row.id}>
                   <button className="editButton">Edit</button>
                   </Link>
                   <Delete className="deleteButton" onClick={()=>handleDelete(params.row.id)}/></>

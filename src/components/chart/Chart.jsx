@@ -5,45 +5,45 @@ export default function Chart() {
 
     const data = [
         {
-          name: 'Page A',
-          uv: 4000,
-          pv: 2400,
+          name: 'Camera-1',
+          health: 4000,
+          sales: 2400,
           amt: 2400,
         },
         {
-          name: 'Page B',
-          uv: 3000,
-          pv: 1398,
+          name: 'Camera-2',
+          health: 3000,
+          sales: 1398,
           amt: 2210,
         },
         {
-          name: 'Page C',
-          uv: 2000,
-          pv: 9800,
+          name: 'Camera-3',
+          health: 2000,
+          sales: 9800,
           amt: 2290,
         },
         {
-          name: 'Page D',
-          uv: 2780,
-          pv: 3908,
+          name: 'Camera-4',
+          health: 2780,
+          sales: 3908,
           amt: 2000,
         },
         {
-          name: 'Page E',
-          uv: 1890,
-          pv: 4800,
+          name: 'Camera-5',
+          health: 1890,
+          sales: 4800,
           amt: 2181,
         },
         {
-          name: 'Page F',
-          uv: 2390,
-          pv: 3800,
+          name: 'Camera-6',
+          health: 2390,
+          sales: 3800,
           amt: 2500,
         },
         {
-          name: 'Page G',
-          uv: 3490,
-          pv: 4300,
+          name: 'Camera-7',
+          health: 3490,
+          sales: 4300,
           amt: 2100,
         },
       ];
@@ -67,7 +67,7 @@ export default function Chart() {
         <XAxis dataKey="name" />
           <YAxis />
           <Tooltip/>
-          <Bar dataKey="uv" fill="#8884d8" />
+          <Bar dataKey="health" fill="#8884d8" />
         </BarChart>
         </ResponsiveContainer>
 
@@ -88,8 +88,8 @@ export default function Chart() {
           <YAxis />
           <Tooltip />
           <Legend />
-          <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{ r: 8 }} />
-          <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+          <Line type="monotone" dataKey="sales" stroke="#8884d8" activeDot={{ r: 8 }} />
+          <Line type="monotone" dataKey="health" stroke="#82ca9d" />
         </LineChart>
       </ResponsiveContainer>
       </div>

@@ -8,7 +8,7 @@ export default function ViewCamera() {
       <section class="grid-container">
 
   <div class="grid-item">
-    <iframe src = "http://127.0.0.1:5000/video_feed?ipaddress=http://webcam.town.karuizawa.nagano.jp/krcam07/mjpg/1/video.mjpg" frameborder = "0" allowfullscreen></iframe>
+    <iframe src = "https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/HzG7GjKdbj6nk9is6/videoblocks-the-work-of-the-team-in-the-situation-room-real-time-monitoring-of-the-situation-in-the-country_rnux_i12g__22045e9d8b4afa1c7054465597a960d0__P360.mp4" frameborder = "0" allowfullscreen></iframe>
     <button class="button1">ID 1</button>
     <Link to="/updatecamera"><button class="button2">edit</button></Link>
     <br/>
@@ -18,7 +18,7 @@ export default function ViewCamera() {
   </div>
 
   <div class="grid-item">
-    <iframe src = "" frameborder = "0" allowfullscreen></iframe>
+    <iframe src = "https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/D8qa-2E/surveillance-monitoring-observation-supervision-security-camera-view-persons_sdlznwdi__231c5ac906f27897c37f21420a859804__P360.mp4" frameborder = "0" allowfullscreen></iframe>
     <button class="button1">ID 2</button>
     <Link to="/updatecamera"><button class="button2">edit</button></Link>
     <br/>
@@ -58,7 +58,7 @@ export default function ViewCamera() {
   </div>
 
   <div class="grid-item">
-    <iframe src = "https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/msqd2XJ/videoblocks-63dbdbe73c8574796ea05d51_b4ttp2y2j__359af475ce9c0921ec71d6079f416d22__P360.mp4" frameborder = "0" allowfullscreen></iframe>
+    <iframe src = "https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/HzG7GjKdbj6nk9is6/videoblocks-the-work-of-the-team-in-the-situation-room-real-time-monitoring-of-the-situation-in-the-country_rnux_i12g__22045e9d8b4afa1c7054465597a960d0__P360.mp4" frameborder = "0" allowfullscreen></iframe>
     <button class="button1">ID 6</button>
     <Link to="/updatecamera"><button class="button2">edit</button></Link>
     <br/>
@@ -88,7 +88,7 @@ export default function ViewCamera() {
   </div>
 
   <div class="grid-item">
-    <iframe src = "https://www.youtube.com/embed/Q8TXgCzxEnw?rel=0" frameborder = "0" allowfullscreen></iframe>
+    <iframe src = "https://dm0qx8t0i9gc9.cloudfront.net/watermarks/video/D8qa-2E/state-collecting-big-data-information-public-surveillance_hulw3zcj5__b68c0b8e48126e7edfdebef46fa8c728__P360.mp4" frameborder = "0" allowfullscreen></iframe>
     <button class="button1">ID 9</button>
     <Link to="/updatecamera"><button class="button2">edit</button></Link>
     <br/>

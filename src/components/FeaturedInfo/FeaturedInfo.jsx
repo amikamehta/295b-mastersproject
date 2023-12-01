@@ -1,5 +1,6 @@
 import { ArrowUpward, CameraAlt, Edit, Person } from "@material-ui/icons";
 import "./featuredInfo.css"
+import { Link } from "react-router-dom";
 
 export default function FeaturedInfo() {
   return (
@@ -11,7 +12,9 @@ export default function FeaturedInfo() {
             <div className="moneyContainer">
                 <span className="Rate">
                     40 
+                    <Link to ="/viewcamera">
                     <CameraAlt className="icon"/>
+                    </Link>
                 </span>
             </div>
             <span className="textInfo">
@@ -26,7 +29,9 @@ export default function FeaturedInfo() {
             <div className="moneyContainer">
             <span className="Rate">
                 10 
+                <Link to = "/alerts">
                 <ArrowUpward className="icon"/>
+                </Link>
             </span>
             </div>
             <span className="textInfo">
@@ -41,7 +46,9 @@ export default function FeaturedInfo() {
             <div className="moneyContainer">
             <span className="Rate">
                 30
+                <Link to ="/schedules">
                 <Edit className="icon"/>
+                </Link>
             </span>
             </div>
             <span className="textInfo">
@@ -56,7 +63,9 @@ export default function FeaturedInfo() {
             <div className="moneyContainer">
             <span className="Rate">
                 2000
+                <Link to = "/users">
                 <Person className="icon"/>
+                </Link>
             </span>
             </div>
             <span className="textInfo">

@@ -25,9 +25,10 @@ export const steps = [
         { value: 'Business Hours', label: 'Business Hours', trigger: 'Show Business Hours' },
         { value: 'Location', label: 'Location', trigger: 'Location' },
         { value: 'Contact Information', label: 'Contact Information', trigger: 'Contact Information' },
-        { value: 'Camera setup', label: 'Start again', trigger: 'Greet' },
+        { value: 'Camera Setup', label: 'Camera Setup', trigger: 'Camera Setup' },
         { value: 'Billing query', label: 'Start again', trigger: 'Greet' },
         { value: 'Camera catlog', label: 'Start again', trigger: 'Greet' },
+        
         { value: 'Start again', label: 'Start again', trigger: 'Greet' },
         { value: 'End', label: 'End', trigger: 'End' },
       ],
@@ -48,8 +49,8 @@ export const steps = [
         trigger: 'Select issue'
     },
     {
-      id: 'Camera setup',
-      message: 'For information pertenaning the setup please check out - page.',
+      id: 'Camera Setup',
+      message: 'Do all home security cameras require Wi-Fi? Not all home security cameras  Wi-Fi. Some cameras, like the Arlo Go and the Reolink Go, can use LTE plans instead of Wi-Fi. Other home security cameras arent connected to the internet at all but rather record onto local storage like hard drives.',
       trigger: 'Select issue'
     },
     {

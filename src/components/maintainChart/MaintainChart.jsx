@@ -14,11 +14,11 @@ export default function MaintainChart() {
         },
         series: [
           {
-            name: "series-1",
+            name: "camera-1",
             data: [30, 40, 45, 50, 49, 60, 70, 91]
           },
           {
-            name: "series-2",
+            name: "camera-2",
             data: [3, 4, 85, 55, 19, 6, 12, 89]
           }
         ],
@@ -35,11 +35,11 @@ export default function MaintainChart() {
         },
         series: [
           {
-            name: "series-1",
+            name: "camera-3",
             data: [30, 40, 45, 50, 49, 60, 70, 91]
           },
           {
-            name: "series-2",
+            name: "camera-4",
             data: [3, 4, 85, 55, 19, 6, 12, 89]
           }
         ]
