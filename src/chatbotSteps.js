@@ -25,9 +25,11 @@ export const steps = [
         { value: 'Business Hours', label: 'Business Hours', trigger: 'Show Business Hours' },
         { value: 'Location', label: 'Location', trigger: 'Location' },
         { value: 'Contact Information', label: 'Contact Information', trigger: 'Contact Information' },
-        { value: 'Camera setup', label: 'Start again', trigger: 'Greet' },
-        { value: 'Billing query', label: 'Start again', trigger: 'Greet' },
-        { value: 'Camera catlog', label: 'Start again', trigger: 'Greet' },
+        { value: 'Camera setup', label: 'Camera setup', trigger: 'Camera setup' },
+        { value: 'Billing query', label: 'Billing query', trigger: 'Billing query' },
+        { value: 'Camera catalog', label: 'Camera catalog', trigger: 'Camera catalog' },
+        { value: 'AI query', label: 'AI query', trigger: 'AI query' },
+
         { value: 'Start again', label: 'Start again', trigger: 'Greet' },
         { value: 'End', label: 'End', trigger: 'End' },
       ],
@@ -53,12 +55,17 @@ export const steps = [
       trigger: 'Select issue'
     },
     {
+      id: 'AI query',
+      message: 'We are currently useing YOLOv8 to process all our AI request',
+      trigger: 'Select issue'
+    },
+    {
       id: 'Billing query',
       message: 'For any billing related questions, please log in to your account and scroll down to "Billing" option.',
       trigger: 'Select issue'
     },
     {
-        id: 'Camera catlog',
+        id: 'Camera catalog',
         message: 'We currently provide support for CCTV, IP cameras only',
         trigger: 'Select issue'
     },
