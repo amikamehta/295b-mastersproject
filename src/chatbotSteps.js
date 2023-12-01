@@ -25,18 +25,10 @@ export const steps = [
         { value: 'Business Hours', label: 'Business Hours', trigger: 'Show Business Hours' },
         { value: 'Location', label: 'Location', trigger: 'Location' },
         { value: 'Contact Information', label: 'Contact Information', trigger: 'Contact Information' },
-<<<<<<< HEAD
-        { value: 'Camera Setup', label: 'Camera Setup', trigger: 'Camera Setup' },
-        { value: 'Billing query', label: 'Start again', trigger: 'Greet' },
-        { value: 'Camera catlog', label: 'Start again', trigger: 'Greet' },
-        
-=======
         { value: 'Camera setup', label: 'Camera setup', trigger: 'Camera setup' },
         { value: 'Billing query', label: 'Billing query', trigger: 'Billing query' },
         { value: 'Camera catalog', label: 'Camera catalog', trigger: 'Camera catalog' },
         { value: 'AI query', label: 'AI query', trigger: 'AI query' },
-
->>>>>>> 930a23d4814e1eca5a5979b5f1fe34062a289da1
         { value: 'Start again', label: 'Start again', trigger: 'Greet' },
         { value: 'End', label: 'End', trigger: 'End' },
       ],
