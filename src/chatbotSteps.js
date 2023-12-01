@@ -49,7 +49,7 @@ export const steps = [
         trigger: 'Select issue'
     },
     {
-      id: 'Camera Setup',
+      id: 'Camera setup',
       message: 'Do all home security cameras require Wi-Fi? Not all home security cameras  Wi-Fi. Some cameras, like the Arlo Go and the Reolink Go, can use LTE plans instead of Wi-Fi. Other home security cameras arent connected to the internet at all but rather record onto local storage like hard drives.',
       trigger: 'Select issue'
     },
