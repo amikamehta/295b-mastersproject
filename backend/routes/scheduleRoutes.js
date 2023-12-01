@@ -27,9 +27,9 @@ router.get('/:id', (req, res) => {
 
 // Create a new schedule
 router.post('/', (req, res) => {
-  const { camera_number, severity, status, comments, assignee } = req.body;
-  const sql = 'INSERT INTO schedule (camera_number, severity, status, comments, assignee) VALUES (?, ?, ?, ?, ?)';
-  db.query(sql, [camera_number, severity, status, comments, assignee], (err, result) => {
+  const { camera_number, severity, status, comments, assignee, location } = req.body;
+  const sql = 'INSERT INTO schedule (camera_number, severity, status, comments, assignee, location) VALUES (?, ?, ?, ?, ?, ?)';
+  db.query(sql, [camera_number, severity, status, comments, assignee, location], (err, result) => {
     if (err) throw err;
     res.status(201).json({ id: result.insertId });
   });
@@ -38,9 +38,9 @@ router.post('/', (req, res) => {
 // Update schedule by ID
 router.put('/:id', (req, res) => {
   const scheduleId = req.params.id;
-  const { camera_number, severity, status, comments, assignee } = req.body;
-  const sql = 'UPDATE schedule SET camera_number = ?, severity = ?, status = ?, comments = ?, assignee = ? WHERE id = ?';
-  db.query(sql, [camera_number, severity, status, comments, assignee, scheduleId], (err) => {
+  const { camera_number, severity, status, comments, assignee , location } = req.body;
+  const sql = 'UPDATE schedule SET camera_number = ?, severity = ?, status = ?, comments = ?, assignee = ?, location = ? WHERE id = ?';
+  db.query(sql, [camera_number, severity, status, comments, assignee, location ,scheduleId], (err) => {
     if (err) throw err;
     res.sendStatus(200);
   });

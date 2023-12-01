@@ -1,11 +1,42 @@
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 import { Delete } from "@material-ui/icons";
-import "./userList.css"
+import "./userList.css";
 import { DataGrid } from '@material-ui/data-grid';
-import "../../dummyData.js"
-import { userRows } from "../../dummyData.js";
 import { Link } from "react-router-dom";
 
-const columns = [
+
+  
+  
+export default function UserList() {
+  const [users, setUsers] = useState([]);
+
+    useEffect(() => {
+        const fetchUsers = async () => {
+            try {
+                const response = await axios.get('http://localhost:4000/users');
+                
+                setUsers(response.data);
+            } catch (error) {
+                console.error('Error fetching users:', error);
+            }
+        };
+
+        fetchUsers();
+    }, []);
+
+    const handleDelete = async (id) => {
+      console.log(id);
+      try {
+          
+          await axios.delete(`http://localhost:4000/users/${id}`);
+          setUsers(users.filter((user) => user.id !== id));
+      } catch (error) {
+          console.error('Error deleting user:', error);
+      }
+  };
+
+  const columns = [
     { field: 'id', headerName: 'ID', type:'number', width: 100,sortable: true,headerAlign: 'center', align:'center' },
     { field: 'name', headerName: 'Name', type:'String', width: 140,headerAlign: 'center',align:'center' },
     { field: 'age', headerName: 'Age', type: 'number', width: 100,headerAlign: 'center',align:'center'},
@@ -17,16 +48,17 @@ const columns = [
             return(
                 <>
                 {/* Link to a paticular page->params.row */}
-                <Link to={"/editUsers/"+params.row.id}>
-                <button className="editButton">Edit</button>
-                </Link>
-                <Delete className="deleteButton"/></>
+                <Link to={"/editUsers/" + params.row.id}>
+                        <button className="editButton">Edit</button>
+                    </Link>
+                    <Delete 
+                        className="deleteButton" 
+                        onClick={() => handleDelete(params.row.id)}
+                    />
+                  </>
             )}
     },
   ];
-  
-  
-export default function UserList() {
   return (
     <div className="userList">
         <span className="title">
@@ -35,12 +67,12 @@ export default function UserList() {
         <button className="createButton">Add New User</button>
         </Link>
         </span>
-            <DataGrid
-            rows={userRows}
-            disableSelectionOnClick
-            columns={columns}
-            pageSize={10}
-            style={{color:"whitesmoke",fontWeight:400,fontSize:"15px"}}
+        <DataGrid
+                rows={users}
+                disableSelectionOnClick
+                columns={columns}
+                pageSize={10}
+                style={{ color: "whitesmoke", fontWeight: 400, fontSize: "15px" }}
             />
       </div>
   );

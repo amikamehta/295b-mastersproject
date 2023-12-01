@@ -5,9 +5,9 @@ const db = require('../database');
 // Get all cameras
 router.get('/', (req, res) => {
   const sql = 'SELECT * FROM camera';
-  db.query(sql, (err, results) => {
-    if (err) throw err;
-    res.json(results);
+  db.query(sql, (err, result) => {
+      if (err) throw err;
+      res.status(200).json(result);
   });
 });
 
@@ -27,23 +27,23 @@ router.get('/:id', (req, res) => {
 
 // Create a new camera
 router.post('/', (req, res) => {
-  const { name, cost, image } = req.body;
-  const sql = 'INSERT INTO camera (name, cost, image) VALUES (?, ?, ?)';
-  db.query(sql, [name, cost, image], (err, result) => {
-    if (err) throw err;
-    res.status(201).json({ id: result.insertId });
-  });
+  const { location, camera_type, ip_address, nickname, comments } = req.body;
+  console.log(req.body);
+    const sql = 'INSERT INTO camera (location, camera_type, ip_address, nickname, comments) VALUES (?, ?, ?, ?, ?)';
+    db.query(sql, [location, camera_type, ip_address, nickname, comments], (err, result) => {
+        if (err) throw err;
+        res.status(201).send(`Camera added with ID: ${result.insertId}`);
+    });
 });
 
 // Update camera by ID
 router.put('/:id', (req, res) => {
-  const cameraId = req.params.id;
-  const { name, cost, image } = req.body;
-  const sql = 'UPDATE camera SET name = ?, cost = ?, image = ? WHERE id = ?';
-  db.query(sql, [name, cost, image, cameraId], (err) => {
-    if (err) throw err;
-    res.sendStatus(200);
-  });
+  const { location, camera_type, ip_address, nickname, comments } = req.body;
+    const sql = `UPDATE camera SET location = ?, camera_type = ?, ip_address = ?, nickname = ?, comments = ? WHERE id = ${req.params.id}`;
+    db.query(sql, [location, camera_type, ip_address, nickname, comments], (err) => {
+        if (err) throw err;
+        res.status(200).send(`Camera updated with ID: ${req.params.id}`);
+    });
 });
 
 // Delete camera by ID

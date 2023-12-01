@@ -22,7 +22,6 @@ const cameraRoutes = require('./routes/cameraRoutes');
 
 // Use route files
 app.use('/users', usersRoutes);
-// Add similar lines for other routes
 app.use('/alerts', alertsRoutes);
 app.use('/camera', cameraRoutes);
 app.use('/schedule', scheduleRoutes);

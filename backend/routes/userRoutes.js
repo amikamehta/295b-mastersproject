@@ -27,9 +27,9 @@ router.get('/:id', (req, res) => {
 
 // Create a new user
 router.post('/', (req, res) => {
-  const { name, email, location, type } = req.body;
-  const sql = 'INSERT INTO users (name, email, location, type) VALUES (?, ?, ?, ?)';
-  db.query(sql, [name, email, location, type], (err, result) => {
+  const { name, email, location, type, age } = req.body;
+  const sql = 'INSERT INTO users (name, email, location, type, age) VALUES (?, ?, ?, ?, ?)';
+  db.query(sql, [name, email, location, type, age], (err, result) => {
     if (err) throw err;
     res.status(201).json({ id: result.insertId });
   });
@@ -38,9 +38,9 @@ router.post('/', (req, res) => {
 // Update user by ID
 router.put('/:id', (req, res) => {
   const userId = req.params.id;
-  const { name, email, location, type } = req.body;
-  const sql = 'UPDATE users SET name = ?, email = ?, location = ?, type = ? WHERE id = ?';
-  db.query(sql, [name, email, location, type, userId], (err) => {
+  const { name, email, location, type, age } = req.body;
+  const sql = 'UPDATE users SET name = ?, email = ?, location = ?, type = ?, age = ? WHERE id = ?';
+  db.query(sql, [name, email, location, type, age, userId], (err) => {
     if (err) throw err;
     res.sendStatus(200);
   });
