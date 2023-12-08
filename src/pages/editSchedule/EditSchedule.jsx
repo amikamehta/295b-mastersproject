@@ -1,16 +1,47 @@
-import React, { useContext } from 'react';
-import "./editSchedule.css"
+import React, { useState, useEffect, useContext } from 'react';
+import { useParams } from 'react-router-dom';
+import axios from 'axios';
+import "./editSchedule.css";
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 import { Link } from 'react-router-dom';
-import { Navbar, Button} from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
 
 export default function EditUser() {
-  const [open, setOpen] = React.useState(false);
+  const { scheduleId } = useParams();
+  const [scheduleData, setScheduleData] = useState({
+    camera: '',
+    location: '',
+    email: '',
+    assignee: '',
+    severity: '',
+    comments: ''
+  });
+  const [open, setOpen] = useState(false);
+
+  // Fetch schedule data
+  useEffect(() => {
+    console.log("schedule "+ scheduleId);
+    const fetchScheduleData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:4000/schedule/${scheduleId}`);
+        setScheduleData(response.data);
+      } catch (error) {
+        console.error('Error fetching schedule data:', error);
+      }
+    };
+
+    fetchScheduleData();
+  }, [scheduleId]);
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setScheduleData({ ...scheduleData, [name]: value });
+  };
+
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-
 
   const style = {
     position: 'absolute',

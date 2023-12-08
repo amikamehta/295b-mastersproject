@@ -26,7 +26,7 @@ export default function Alerts() {
     const handleDelete = async (id) => {
         try {
             // Send a DELETE request to your API endpoint
-            await axios.delete('http://localhost:4000/alerts/${id}');
+            await axios.delete(`http://localhost:4000/alerts/${id}`);
     
             // Update the state to reflect the deletion
             setData(data.filter((item) => item.id !== id));

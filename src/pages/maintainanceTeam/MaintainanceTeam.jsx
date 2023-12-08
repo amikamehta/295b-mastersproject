@@ -41,7 +41,7 @@ const columns = [
     { field: 'email', headerName: 'Email', type: 'string', width: 140,headerAlign: 'center',align:'center'},
     { field: 'age', headerName: 'Age', type: 'number', width: 140,headerAlign: 'center',align:'center'},
     { field: 'location', headerName: 'Location',sortable: true, width: 150,headerAlign: 'center',align:'center' },
-    { field: 'comments', headerName: 'Comments', type:'String',sortable: false,width: 150,headerAlign: 'center',align:'center'},
+    // { field: 'comments', headerName: 'Comments', type:'String',sortable: false,width: 150,headerAlign: 'center',align:'center'},
     { field: 'Action', headerName: 'Action', type:'String',sortable: false,width: 155,headerAlign: 'center',align:'center',
         renderCell:(params)=>{
             return(

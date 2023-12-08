@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import "./editUser.css";
@@ -22,7 +22,23 @@ export default function EditUser() {
   });
   const [open, setOpen] = React.useState(false);
 
+  // Fetch user data
+  useEffect(() => {
+    const fetchUserData = async () => {
+      try {
+        const response = await axios.get(`http://localhost:4000/users/${userId}`);
+        console.log(response.data);
+        setUserData(response.data);
+      } catch (error) {
+        console.error('Error fetching user data:', error);
+      }
+    };
+
+    fetchUserData();
+  }, [userId]);
+
   const handleInputChange = (e) => {
+    console.log(userData);
     const { name, value } = e.target;
     setUserData({ ...userData, [name]: value });
   };
@@ -58,7 +74,7 @@ export default function EditUser() {
         <div class="form-style-6">
           <form onSubmit={handleSubmit}>
             <input type="text" name="id" placeholder="User ID" value={userData.id} onChange={handleInputChange} readOnly/>
-            <input type="text" name="name" placeholder="Name" onChange={handleInputChange} />
+            <input type="text" name="name" placeholder="Name" value={userData.name} onChange={handleInputChange} />
             <input type="number" name="age" placeholder="Age" value={userData.age} onChange={handleInputChange} />
             <input type="text" name="email" placeholder="Email" value={userData.email} onChange={handleInputChange} />
             <input type="text" name="location" placeholder="Location" value={userData.location} onChange={handleInputChange} />
